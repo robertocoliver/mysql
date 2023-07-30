@@ -30,3 +30,14 @@ CREATE TABLE cursos (
 
 4. Feito isso, basta pedir ao chatgpd para gerar um comando para adicionar os valores gerados na tabela cursos 
 ![Screenshot](https://github.com/robertocoliver/mysql/assets/102238044/23cd6c2d-ac01-45f0-a621-d0e2e7b680af)
+
+
+## Usando o mysqldump no linux para fazer backup
+1. Vá até o diretório
+```bash
+  /opt/lampp/bin
+```   
+2. Execute a ferramenta passando o nome do banco de dados e o diretório onde será salvo
+```bash
+  ./mysqldump cursos_online >> /diretorio/diretorio/dump.sql
+```
