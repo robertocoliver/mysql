@@ -41,3 +41,9 @@ CREATE TABLE cursos (
 ```bash
   ./mysqldump cursos_online >> /diretorio/diretorio/dump.sql
 ```
+
+
+<br />
+
+[Meu artigo de MySQL](https://medium.com/@robertocoliver/mysql-15fd5f6834f3)<br />
+
