@@ -16,6 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `alunos`
+--
+
+DROP TABLE IF EXISTS `alunos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `alunos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(30) NOT NULL,
+  `curso` varchar(30) NOT NULL,
+  `idade` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `alunos`
+--
+
+LOCK TABLES `alunos` WRITE;
+/*!40000 ALTER TABLE `alunos` DISABLE KEYS */;
+INSERT INTO `alunos` VALUES (1,'João da Silva','ADS',20),(2,'Maria Souza','Engenharia da Computação',22),(3,'Pedro Lima','Ciência da Computação',25);
+/*!40000 ALTER TABLE `alunos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `cursos`
 --
 
@@ -25,12 +51,13 @@ DROP TABLE IF EXISTS `cursos`;
 CREATE TABLE `cursos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(30) NOT NULL,
-  `descricao` varchar(50) DEFAULT NULL,
-  `carga` int(11) DEFAULT NULL,
-  `totalaulas` int(11) DEFAULT NULL,
+  `descricao` varchar(60) DEFAULT NULL,
+  `carga` int(10) unsigned DEFAULT NULL,
+  `totalaulas` int(10) unsigned DEFAULT NULL,
   `ano` year(4) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `nome` (`nome`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +66,7 @@ CREATE TABLE `cursos` (
 
 LOCK TABLES `cursos` WRITE;
 /*!40000 ALTER TABLE `cursos` DISABLE KEYS */;
-INSERT INTO `cursos` VALUES (1,'HTML','Curso tal',30,10,2015),(2,'CSS','Curso tal',25,8,2016),(3,'Java','Curso tal',40,12,2017),(4,'JavaScript','Curso tal',35,11,2018),(5,'Segurança da Informação','Curso tal',50,15,2019),(6,'HTML','Curso tal',30,10,2020),(7,'CSS','Curso tal',25,8,2021),(8,'Java','Curso tal',40,12,2022),(9,'JavaScript','Curso tal',35,11,2023),(10,'Segurança da Informação','Curso tal',50,15,2024),(11,'HTML','Curso tal',30,10,2025),(12,'CSS','Curso tal',25,8,2026),(13,'Java','Curso tal',40,12,2027),(14,'JavaScript','Curso tal',35,11,2028),(15,'Segurança da Informação','Curso tal',50,15,2029),(16,'HTML','Curso tal',30,10,2030),(17,'CSS','Curso tal',25,8,2031),(18,'Java','Curso tal',40,12,2032),(19,'JavaScript','Curso tal',35,11,2033),(20,'Segurança da Informação','Curso tal',50,15,2034),(21,'HTML','Curso tal',30,10,2035),(22,'CSS','Curso tal',25,8,2036),(23,'Java','Curso tal',40,12,2037),(24,'JavaScript','Curso tal',35,11,2038),(25,'Segurança da Informação','Curso tal',50,15,2039),(26,'HTML','Curso tal',30,10,2040),(27,'CSS','Curso tal',25,8,2041),(28,'Java','Curso tal',40,12,2042),(29,'JavaScript','Curso tal',35,11,2043),(30,'Segurança da Informação','Curso tal',50,15,2044),(31,'HTML','Curso tal',30,10,2045),(32,'CSS','Curso tal',25,8,2046),(33,'Java','Curso tal',40,12,2047),(34,'JavaScript','Curso tal',35,11,2048),(35,'Segurança da Informação','Curso tal',50,15,2049),(36,'HTML','Curso tal',30,10,2050),(37,'CSS','Curso tal',25,8,2051),(38,'Java','Curso tal',40,12,2052),(39,'JavaScript','Curso tal',35,11,2053),(40,'Segurança da Informação','Curso tal',50,15,2054),(41,'HTML','Curso tal',30,10,2055),(42,'CSS','Curso tal',25,8,2056),(43,'Java','Curso tal',40,12,2057),(44,'JavaScript','Curso tal',35,11,2058),(45,'Segurança da Informação','Curso tal',50,15,2059),(46,'HTML','Curso tal',30,10,2060),(47,'CSS','Curso tal',25,8,2061),(48,'Java','Curso tal',40,12,2062),(49,'JavaScript','Curso tal',35,11,2063),(50,'Segurança da Informação','Curso tal',50,15,2064);
+INSERT INTO `cursos` VALUES (1,'HTML','Curso de HTML ou curso de CSS',30,10,2015),(2,'CSS','Curso de HTML ou curso de CSS',25,8,2016),(3,'Java','Curso de Java ou curso de JavaScript',40,12,2017),(4,'JavaScript','Curso de Java ou curso de JavaScript',35,11,2018),(5,'Segurança da Informação','Curso de Segurança da Informação ou curso de Python',50,15,2019),(6,'Python','Curso de Segurança da Informação ou curso de Python',30,10,2020),(7,'C++','Curso de C++ ou curso de C#',25,8,2021),(8,'C#','Curso de C++ ou curso de C#',40,12,2022),(9,'React','Curso de React ou curso de Machine Learning',35,11,2023),(10,'Machine Learning','Curso de React ou curso de Machine Learning',50,15,2024),(11,'PHP','Curso de PHP ou curso de Ruby',30,10,2015),(12,'Ruby','Curso de PHP ou curso de Ruby',25,8,2016),(13,'Swift','Curso de Swift ou curso de Android',40,12,2017),(14,'Android','Curso de Swift ou curso de Android',35,11,2018),(15,'iOS','Curso de iOS ou curso de SQL',50,15,2019),(16,'SQL','Curso de iOS ou curso de SQL',30,10,2020),(17,'MongoDB','Curso de MongoDB ou curso de Node.js',25,8,2021),(18,'Node.js','Curso de MongoDB ou curso de Node.js',40,12,2022),(19,'Man in the middle','Curso de Man in the middle ou curso de Segurança Cibernética',35,11,2023),(20,'Data Science','Curso de Data Science ou curso de Redes de Computadores',45,14,2024);
 /*!40000 ALTER TABLE `cursos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-30  3:32:27
+-- Dump completed on 2023-08-03  1:03:57
