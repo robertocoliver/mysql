@@ -46,4 +46,6 @@ CREATE TABLE cursos (
 <br />
 
 [Meu artigo de MySQL](https://medium.com/@robertocoliver/mysql-15fd5f6834f3)<br />
+[Meu artigo sobre modelo relacional](https://medium.com/@robertocoliver/modelo-relacional-f3b92d95a11f)<br />
+
 
